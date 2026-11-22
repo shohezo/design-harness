@@ -1,0 +1,12 @@
+/* 土台: リセット・本文・レイアウトの共通。値は tokens.css の var(--…) だけを使う */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--size-header-h); }
+body { margin: 0; font-family: var(--font-sans); font-size: var(--font-size-md); line-height: var(--lh-body); color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+a { color: var(--brand); }
+img { max-width: 100%; height: auto; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.wrap { width: min(100% - var(--spacing-2xl), var(--size-content-w)); margin-inline: auto; }
+.overline { color: var(--brand); font-size: var(--font-size-xs); font-weight: var(--fw-bold); letter-spacing: .12em; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }

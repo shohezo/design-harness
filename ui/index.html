@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ほしの製パン（見本） — design-harness</title>
+  <meta name="description" content="design-harness の見本ページ。架空のパン屋のトップページです。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/tokens/tokens.css">
+  <link rel="stylesheet" href="./src/styles/base.css">
+  <link rel="stylesheet" href="./src/styles/components.css">
+  <link rel="stylesheet" href="./src/styles/sections.css">
+</head>
+<body>
+  <!-- 見本: 架空のパン屋「ほしの製パン」。店名・住所・メニューはすべて創作です。 -->
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="logo" href="./">ほしの製パン</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav">メニュー</button>
+      <nav id="global-nav" class="global-nav" aria-label="メインメニュー">
+        <a href="#story">こだわり</a>
+        <a href="#menu">メニュー</a>
+        <a href="#shop">店舗情報</a>
+        <a class="btn btn--primary btn--sm" href="#reserve">取り置きを予約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="overline">SINCE 2016</p>
+        <h1 class="t-display-hero">朝7時、<br>焼きたてを。</h1>
+        <p class="lead">国産小麦と自家製の酵母で、毎朝30種類のパンを焼いています。</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#reserve">取り置きを予約</a>
+          <a class="btn btn--line" href="#menu">メニューを見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="overline">OUR STORY</p>
+          <h2 class="t-heading-section">3つのこだわり</h2>
+        </header>
+        <div class="card-grid">
+          <article class="card">
+            <span class="tag">素材</span>
+            <h3 class="t-heading-card">国産小麦だけ</h3>
+            <p>北海道と九州の小麦を、パンの種類ごとに配合を変えて使っています。</p>
+          </article>
+          <article class="card">
+            <span class="tag">酵母</span>
+            <h3 class="t-heading-card">自家製の酵母</h3>
+            <p>レーズンから起こした酵母を、毎日継ぎ足して育てています。</p>
+          </article>
+          <article class="card">
+            <span class="tag">時間</span>
+            <h3 class="t-heading-card">一晩ねかせる</h3>
+            <p>低い温度で16時間発酵させ、小麦の甘みを引き出します。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section section--alt">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="overline">MENU</p>
+          <h2 class="t-heading-section">定番のパン</h2>
+        </header>
+        <table class="price-table">
+          <caption>価格はすべて税込みです。</caption>
+          <tbody>
+            <tr><th scope="row">食パン（1斤）</th><td>420円</td></tr>
+            <tr><th scope="row">カンパーニュ（1/2）</th><td>380円</td></tr>
+            <tr><th scope="row">クロワッサン</th><td>260円</td></tr>
+            <tr><th scope="row">あんバター</th><td>280円</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="overline">SHOP</p>
+          <h2 class="t-heading-section">店舗情報</h2>
+        </header>
+        <dl class="info-list">
+          <div><dt>営業時間</dt><dd>7:00〜売り切れまで</dd></div>
+          <div><dt>定休日</dt><dd>月曜・火曜</dd></div>
+          <div><dt>所在地</dt><dd>架空県ほしの市 1-2-3</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="reserve" class="cta-band">
+      <div class="wrap">
+        <h2 class="t-heading-section">前日までなら、取り置きできます。</h2>
+        <p>予約フォームから、受け取りの日とパンを選んでください。</p>
+        <a class="btn btn--inverse" href="#reserve">取り置きを予約</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="logo logo--footer">ほしの製パン</p>
+      <p class="site-footer__note">このページは design-harness の見本です。店名・住所・メニューはすべて架空のものです。</p>
+    </div>
+  </footer>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "design-harness",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI エージェントと人が同じルールで UI を作るための、デザイントークン起点のハーネス（制約 → コンテキスト → 検証 → フィードバック）。",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "vite ui",
+    "build": "npm run tokens && vite build ui",
+    "preview": "vite preview ui",
+    "tokens": "node scripts/build-tokens.mjs",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "check": "npm run check:tokens && npm run check:pages",
+    "check:tokens": "node scripts/check-tokens.mjs",
+    "check:pages": "node scripts/check-pages.mjs"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.5",
+    "@storybook/addon-docs": "^10.6.5",
+    "@storybook/html-vite": "^10.6.5",
+    "storybook": "^10.6.5",
+    "vite": "^7.3.5"
+  }
+}

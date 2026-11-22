@@ -1,0 +1,24 @@
+name: check
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: npm run check（トークン準拠・コントラスト・SP/PC の崩れ）
+        run: npm run check
+        env:
+          CHROME: google-chrome
+      - name: スクリーンショットを保存
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: check-screenshots
+          path: .check/

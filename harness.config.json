@@ -1,0 +1,33 @@
+{
+  "$comment": "検査の対象と条件。プロジェクトに合わせてここだけ書き換える（スクリプトは触らない）。",
+  "styles": "ui/src/styles",
+  "tokens": "ui/src/tokens/tokens.json",
+  "tokensCss": "ui/src/tokens/tokens.css",
+  "spBreakpoint": 640,
+  "pages": [
+    { "name": "home", "path": "/" }
+  ],
+  "viewports": [
+    { "name": "sp", "width": 390, "height": 844, "mobile": true },
+    { "name": "pc", "width": 1280, "height": 900, "mobile": false }
+  ],
+  "fonts": [
+    { "name": "Noto Sans JP", "check": ["400 16px \"Noto Sans JP\"", "700 16px \"Noto Sans JP\""] },
+    { "name": "DM Serif Display", "check": ["400 32px \"DM Serif Display\""], "onlyIfUsed": true }
+  ],
+  "contrast": [
+    ["text/primary", "bg/base", 4.5, "本文"],
+    ["text/primary", "bg/alt", 4.5, "本文（交互背景）"],
+    ["text/secondary", "bg/base", 4.5, "説明文・ナビ"],
+    ["text/secondary", "bg/alt", 4.5, "説明文（交互背景）"],
+    ["text/muted", "bg/base", 4.5, "注釈"],
+    ["text/muted", "bg/alt", 4.5, "注釈（交互背景）"],
+    ["text/inverse", "brand/primary", 4.5, "ボタンの文字"],
+    ["text/inverse", "brand/hover", 4.5, "ボタンの文字（hover）"],
+    ["brand/primary", "bg/base", 4.5, "リンク・小ラベル"],
+    ["brand/primary", "brand/subtle", 4.5, "タグ（ブランド色の文字＋淡い背景）"],
+    ["text/inverse", "bg/footer", 4.5, "フッター"],
+    ["border/strong", "bg/base", 3, "入力欄・ボタンの枠（非テキスト）"]
+  ],
+  "allowUndefinedVars": []
+}

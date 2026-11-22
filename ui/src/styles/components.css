@@ -1,0 +1,36 @@
+/* 部品: どのセクションでも使う見た目。新しい見た目を作る前に、ここと Storybook に同じ役割の部品が無いか探す */
+
+/* Button: 主（primary）・枠（line）・反転（inverse）、小（sm） */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-sm); min-height: var(--size-tap); padding: var(--spacing-md) var(--spacing-xl); border: 1px solid transparent; border-radius: var(--radius-pill); font-size: var(--font-size-md); font-weight: var(--fw-bold); line-height: var(--lh-tight); text-decoration: none; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.btn--primary { background: var(--brand); color: var(--text-inverse); }
+.btn--primary:hover { background: var(--brand-hover); }
+.btn--line { background: var(--bg); color: var(--text); border-color: var(--line-strong); }
+.btn--line:hover { border-color: var(--brand); color: var(--brand); }
+.btn--inverse { background: var(--bg); color: var(--brand); }
+.btn--inverse:hover { background: var(--brand-subtle); }
+.btn--sm { min-height: 40px; padding: var(--spacing-sm) var(--spacing-lg); font-size: var(--font-size-sm); }
+
+/* Tag */
+.tag { display: inline-block; padding: var(--spacing-xs) var(--spacing-sm); border-radius: var(--radius-sm); background: var(--brand-subtle); color: var(--brand); font-size: var(--font-size-xs); font-weight: var(--fw-bold); line-height: var(--lh-tight); }
+
+/* Card */
+.card { display: grid; gap: var(--spacing-md); align-content: start; padding: var(--spacing-xl); border: 1px solid var(--line); border-radius: var(--radius-lg); background: var(--bg); box-shadow: var(--shadow-sm); }
+.card .tag { justify-self: start; }
+.card p { color: var(--text-2); font-size: var(--font-size-sm); }
+.card-grid { display: grid; gap: var(--spacing-xl); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+/* Section heading */
+.sec-head { display: grid; gap: var(--spacing-sm); margin-bottom: var(--spacing-2xl); }
+
+/* Price table */
+.price-table { width: 100%; max-width: 640px; border-collapse: collapse; }
+.price-table caption { caption-side: bottom; padding-top: var(--spacing-md); color: var(--text-muted); font-size: var(--font-size-sm); text-align: left; }
+.price-table th, .price-table td { padding: var(--spacing-lg) 0; border-bottom: 1px solid var(--line); }
+.price-table th { font-weight: var(--fw-regular); text-align: left; }
+.price-table td { font-weight: var(--fw-bold); text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* Definition list */
+.info-list { display: grid; gap: 0; margin: 0; max-width: 640px; }
+.info-list > div { display: grid; grid-template-columns: 8em 1fr; gap: var(--spacing-lg); padding: var(--spacing-lg) 0; border-bottom: 1px solid var(--line); }
+.info-list dt { color: var(--text-2); font-weight: var(--fw-bold); }
+.info-list dd { margin: 0; }
